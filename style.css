@@ -1,43 +1,41 @@
 @charset "utf-8";
 /* CSS Document */
 
-@font-face {
+@font-face 
+{
     font-family: 'Sono-Bold';
     src: url('fonts/Butler-ExtraBold.woff2');
 }
 
-
-
 body {
+/*    overflow-x: hidden;*/
     margin: 0;
     background-image: url("images/Background.jpg");
     background-size: cover;
-    font-family: 'Sono-Bold';
+    background-position-y: -1000px;
+    font-family: Arial;
     color: white;
 }
 
-
+/*========================================================================================================*/
+/* Nav Bar CSS*/
 nav {
-    width: 90%;
-    margin: 20px auto 0;
-    display: flex; /* Enables horizontal layout */
-    justify-content: space-between; /* Logo left, links right */
-    align-items: center; /* Vertically aligns logo + buttons */
-    padding: 10px 0;
-    border-radius: 10px;
-}
-
-nav .logo img {
-    height: 100px; /* Adjust as needed */
+    position: absolute;
+    top: 2%;
+    right: 2%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 0;
     padding: 0;
+    margin: 0; 
+    background: rgba(57, 72, 58, 0.5); 
+    border-radius: 5px;
+    overflow: hidden; /* So the Nav Bar on the sides allow to be curve as well */
 }
+
+
 
 nav button {
     background: none;
@@ -45,172 +43,134 @@ nav button {
     color: white;
     font-size: 1.6em;
     cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-
-.Background_Banner {
-    background-color: rgba(57, 72, 58, 0.7);
-    width: 90%;
-    margin: 0 auto;
-    align-items: center;
-    color: white;
+    padding: 15px 30px;
+    display: block;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10%;
-    margin-top: 20px;
-    border-radius: 5px 5px 0px 0px;
 }
 
-#Train_Details_Container 
-{
+nav button.Active_Btn {
+    background: rgba(0, 0, 0, 0.5);
+}
+/*========================================================================================================*/
+
+
+/*========================================================================================================*/
+/* Main Content CSS */
+#Home_Page_Content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+#Left_Card_Content {
+    margin: 0;
     position: relative;
-    width: 900px;
-    margin: 0 auto;
+    width: 40%;
+    min-height: 90.5vh;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    padding-top: 2%;
+}
+
+#Left_Card_Content h1 {
+    margin: 0;
+    position: relative;
     margin-top: 5%;
+    left: 20%;
+    font-size: 10.65em;
 }
 
-#Train_Line {
-    position: absolute;
-    top: 67%;
-    left: 1.6%;
-    width: 98.5%;
-}
-
-
-#Banner_Info {
-    color: white;
-    display: flex;
-    gap: 20px;
-    padding: 50px 0px 50px 0px;
-    background: rgba(0, 0, 0, 0.8);
-    width: 90%;
-    margin:auto;
-    border-radius: 0px 0px 5px 5px;
-}
-
-.Stat_Box {
-    margin: auto;
-    padding: 0 3% 0 3%;
-}
-/*CSS for responsive menu*/
-#Hamburger_Menu {
-    display: none;
-}
-
-#Type_Train_Line_Section {
-    text-align: center;
-    margin-top: 10%;
-    width: 100%;
-    padding: 2% 0 5% 0;
-    background: rgba(0, 0, 0, 1);
-}
-
-#Train_Card_Info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-
-.Train_Box {
-    width: 10%;
-    margin: 2%;
-    padding: 4% 2% 4% 2%;
-    border-radius: 10px;
-    background: rgba(239, 239, 239, 0.8);
-}
-
-
-
-#SMRT_Map_Section {
-    background-color: rgba(57, 72, 58, 0.7);
-    width: 90%;
-    margin: 0 auto;
-    align-items: center;
-    color: white;
-    text-align: left;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 15%;
-    border-radius: 5px 5px 0px 0px;
+#Left_Card_Content p {
+    margin: 0;
     position: relative;
-    font-size: 0.7em;
+    margin-top: 5%;
+    left: 20%;
+    font-size: 1.7em;
+    text-wrap: wrap;
+    width: 70%;
 }
 
-    #SMRT_Map_Section img {
-        position: absolute;
-        top: -10%;
-        right: 0;
-        width: 60%;
-    }
-
-    #SMRT_Map_Section h1 {
-        font-size: 2.5em;
-        position: absolute;
-        top: -20%;
-        left: 0;
-    }
-
-.Red_Text {
-    color: red;
+.Green-Text {
+    color: #39483a;
 }
 
-.line-legend {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px 20px;
-    align-items: center;
-    font-family: sans-serif;
-    margin: 20px;
+#Button_Navgation {
+    position: relative;
+    margin-top: 5%;
+    left: 20%;
 }
 
-.line-box {
-    width: 30px;
-    height: 10px;
+#Button_Navgation button {
+    padding: 15px 20px;
+    margin: 0px 5px;
+    background: rgba(57, 72, 58, 0.5);
+    border: solid 2px white;
     border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
+/*========================================================================================================*/
 
-.red {
-    background-color: #d71920;
-}
-
-.green {
-    background-color: #009645;
-}
-
-.blue {
-    background-color: #005ec4;
-}
-
-.yellow {
-    background-color: #f6a800;
-}
-
-.brown {
-    background-color: #96710d;
-}
-
-.purple {
-    background-color: #9900aa;
-}
-
-
-#History_Banner {
+/*========================================================================================================*/
+/* Game Page Content */
+#Game_Page_Content {
     width: 100%;
+    height: 900px;
+    margin: 0;
+    background: rgb(0, 0, 0);
+}
+
+#Game_Page_Content h1{
+    padding-top: 5%;
+    margin-left: 5%;
+    font-size: 3em;
+}
+/*========================================================================================================*/
+
+
+/*========================================================================================================*/
+/* Train Track & Train*/
+.Track_Background_image {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('images/MRT_Bridge.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    z-index: -1;
+}
+
+.train-on-track {
+    position: absolute; 
+    bottom: 17.5%;
+    left: 150%;
+    width: 80%;
+    height: auto;
+    z-index: 0;
+    transition: left 0.5s;
+}
+/*========================================================================================================*/
+
+/*========================================================================================================*/
+#History_Banner {
+    width: 90%;
     position: relative;
 }
 
 #History_Card {
     font-size: 1.4em;
     width: 70%;
-    position: absolute;
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-top: 5%;
-    background-color: rgba(57, 72, 58, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 0 10px 10px 0;
     left: 0;
 }
@@ -220,7 +180,7 @@ nav button {
     color: white; /* Button text color */
     border: 2px dotted white; /* Dotted white border */
     padding: 10px 20px; /* Space inside the button */
-    
+
     border-radius: 5px; /* Optional: slightly rounded corners */
     cursor: pointer;
 }
@@ -229,7 +189,7 @@ nav button {
     width: 35%;
     position: absolute;
     top: 20%;
-    right: 5%;
+    left: 40%;
 }
 
 #History_Card p {
@@ -240,27 +200,25 @@ nav button {
 
 #History_TimeLine {
     position: absolute;
-    margin-top: 12%; /* Adjust vertical start */
+    top: 6%; /* Adjust vertical start */
     right: 5%; /* 5% from right */
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    transition: all 0.3s ease;
 }
 
 #History_TimeLine button 
 {
     display: flex;
-    align-items: center; /* Dont Remove it will make the icon unallign with the text*/
+    align-items: center; /* Dont Remove it will make the icon unallign with the text */
+    justify-content: center; /* Make it Center Horizontal so Future and the year dont shift */
+    width: 200px;
     background: none;
     border: none;
     color: white;
     font-size: 2.25em;
     cursor: pointer;
-    padding: 5px 10px;
     font-weight: bold;
-    gap: 20px;
-        
+    margin: 60px 0px;
 }
 
 .Timeline_Icon {
@@ -269,51 +227,189 @@ nav button {
     align-items: center;
     justify-content: center;
     object-fit: contain;
-    
+    margin: 0px 50px;
 }
 
 
+.vl {
+    border-left: 6px dashed white;
+    height:70px;
+    position: absolute;
+    left: 75%;
+    margin: 5%;
+}
 
 
+#First_Vertical_Line {
+    top: 25%;
+}
+
+#Second_Vertical_Line {
+    top: 58.5%;
+}
+/*========================================================================================================*/
+
+/*========================================================================================================*/
+#Quiz_Section
+{
+    margin-top: 10%;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    display: none; /* Hide default radio */
+}
+
+.Restart_Button 
+{
+    padding: 15px 20px;
+    margin: 0px 5px;
+    background: rgba(57, 72, 58, 0.5);
+    border: solid 2px white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 
+.Quiz_Answer_Icon {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: rgb(57, 72, 58);
+    text-align: center;
+    line-height: 40px;
+    margin-right: 20px;
+}
+
+#Answers_Card {
+    background: rgba(57, 72, 58, 0.5);
+    height: 75%;
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+#Answers_Card fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 6% 10%;
+    border: none;
+    padding: 0;
+}
+
+#Answers_Card label {
+    font-size: 1.5em;
+    border: dashed 2px white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5%;
+    padding: 3.5% 2%;
+    text-wrap:auto;
+}
+
+#Answers_Card .selected {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#Answers_Card .correct {
+    background: rgba(0, 55, 0, 0.5);
+}
+
+#Answers_Card .wrong {
+    background: rgba(55, 0, 0, 0.5);
+}
+
+#Results_Details h1
+{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+#Results_Details p {
+    font-size: 2em;
+}
+
+#Questions_Card {
+    background: rgba(0, 0, 0, 0.5);
+    width: 30%;
+    height: 75%;
+    margin-right: 2%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: solid 5px white;
+}
+
+#Questions_Card h1
+{
+    font-size: 2.25em;
+    text-align: center;
+}
+
+#Questions_Card p {
+    font-size: 1.65em;
+    text-align: left;
+    margin: 5%;
+    width: 80%;
+}
+/*========================================================================================================*/
 
 
+/*========================================================================================================*/
+/* Logo */
+.logo {
+    width: 15%;
+    height: auto;
+    padding: 25px 30px;
+    margin: 20px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/*========================================================================================================*/
 
 
-@media (max-width:800px) {
-    /* unhide menu icon */
+/*========================================================================================================*/
+    /* Hamburger Menu */
     #Hamburger_Menu {
-            display: block;
-        }
-        /*hide the menu item list*/
-        nav ul {
-            display: none;
-        }
+    display: none;
+}
+/*========================================================================================================*/
 
-        .Menu_Show {
-            display: block;
-            text-align: center;
-        }
+
+/*========================================================================================================*/
+/*for when is in mobile size*/
+@media (max-width:800px) 
+{
+    /* unhide menu icon */
+    #Hamburger_Menu
+    {
+        display: block;
+    }
+    /*hide the menu item list*/
+    nav ul {
+        display: none;
     }
 
+    .Menu_Show {
+        display: block;
+        text-align: center;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
+/*========================================================================================================*/
 
