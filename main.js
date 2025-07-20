@@ -1,9 +1,9 @@
-const train = document.querySelector('.train-on-track');
+const train = document.querySelector('.Moving_Train_On_Track');
 let Current_Train_Left_Position = 150;
 
 //========================================================================================================================================//
 // Home Page Train Movement to the left and Loop 
-function animateTrain()
+function Animate_Train()
 {
     let Left_Velocity = 2.5;
     train.style.transition = 'left 0.5s';
@@ -17,7 +17,7 @@ function animateTrain()
     }
 }
 
-Make_Train_Move = setInterval(animateTrain, 100);
+Make_Train_Move = setInterval(Animate_Train, 100);
 //========================================================================================================================================//
 
 
