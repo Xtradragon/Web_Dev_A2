@@ -434,9 +434,10 @@ input[type="radio"] {
 
 #Train_Info_Banner {
     margin-top: 8.5%;
+    margin: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 220px;
+    height: 250px;
 }
 .Card_Container {
     margin: 0;
@@ -458,13 +459,14 @@ input[type="radio"] {
 }
 
 #Bush_Background {
-    position:absolute;
-    top: 93%;
+    position:relative;
+    bottom: 32%;
     width: 100%;
     height: 160px;
 }
 
 #Types_Of_Lines_Banner {
+    padding-top: 5%;
     background: rgb(16, 44, 33);
     width: 100%;
     height: 450px;
