@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face 
 {
     font-family: 'Sono-Bold';
@@ -15,6 +20,8 @@ body {
     background-position-y: -1000px;
     font-family: Arial;
     color: white;
+    overflow-x: hidden;
+    
 }
 
 /*========================================================================================================*/
@@ -460,20 +467,264 @@ input[type="radio"] {
 
 #Bush_Background {
     position:relative;
-    bottom: 32%;
+    bottom: 5%;
     width: 100%;
     height: 160px;
 }
 
 #Types_Of_Lines_Banner {
-    padding-top: 5%;
+    text-align: center;
+    padding: 40px 0px;
     background: rgb(16, 44, 33);
     width: 100%;
-    height: 450px;
+    height: 100%;
+}
+
+.Cards_Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.Flip_Card {
+    position: relative;
+    background: rgb(0, 0, 0);
+    width: 220px;
+    height: 350px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    margin: 20px 20px;
+}
+
+.Flip_Card img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.Flip_Card:hover {
+    width: 220px;
+    height: 350px;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+
+.Front_Card {
+    z-index: 2;
+}
+
+.Card_Label {
+    background: white;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+.Line_Name {
+    font-size: 1.15em;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.Hint_Text {
+    font-size: 0.85em;
+    color: gray;
+    padding-bottom: 20px; 
+    margin: 0;
+}
+
+.Red_Underline, .Green_Underline, .Blue_Underline, .Orange_Underline, .Brown_Underline, .Purple_Underline {
+    width: 60%;
+    height: 5px;
+    border-radius: 10px;
+    margin: 10px auto 0;
+}
+
+#Red_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -2px;
+    width: 200px;
+    height: 42px;
+    margin: 80px;
+}
+
+#Green_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -50px;
+    width: 200px;
+    height: 43px;
+    margin: 80px;
+}
+#Blue_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -99px;
+    width: 200px;
+    height: 43px;
+    margin: 80px;
+}
+#Orange_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -194px;
+    width: 200px;
+    height: 42px;
+    margin: 80px;
+}
+#Brown_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -242px;
+    width: 200px;
+    height: 43px;
+    margin: 80px;
+}
+#Purple_Train {
+    background: url('images/Multiple_Train_Sprite.png') no-repeat -2px -147px;
+    width: 200px;
+    height: 43px;
+    margin: 80px;
+}
+
+
+.Red_Underline {
+    background: red;
+}
+
+.Green_Underline {
+    background: green;
+}
+
+.Blue_Underline {
+    background: blue;
+}
+
+.Orange_Underline {
+    background: orange;
+}
+
+.Brown_Underline {
+    background: brown;
+}
+
+.Purple_Underline {
+    background: purple;
+}
+
+    
+
+.Front_Card, .Back_Card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.Back_Card {
+    transform: rotateY(180deg);
+    background: white;
+    border-radius: 10px;
+}
+
+.Description_Text {
+    color: black;
+    text-align: center;
+    height: 60%;
+    background: #efefef;
+    padding: 15px 0px;
+}
+
+#Red_Line
+{
+    border-top: solid 10px red;
+}
+
+#Green_Line {
+    border-top: solid 10px green;
+}
+
+
+#Blue_Line {
+    border-top: solid 10px blue;
+}
+
+
+#Orange_Line {
+    border-top: solid 10px orange;
+}
+
+
+#Brown_Line {
+    border-top: solid 10px brown;
+}
+
+
+#Purple_Line {
+    border-top: solid 10px purple;
+}
+
+
+.Title_Text {
+    margin-top: 35%;
+    font-size: 1.5em;
+    height: 50%;
+    color: black;
+    text-align: center;
 }
 /*========================================================================================================*/
 
 
+/*========================================================================================================*/
+footer {
+    display: flex;
+    width: 100%;
+    border-top: 5px solid white;
+    background: #1b2e18;
+    position: absolute;
+    padding: 10px 0px;
+}
+
+    footer img { /* Add a class to the div containing the logo for better targeting */
+        text-align: center; /* Centers the logo horizontally within its flex item */
+        position: relative;
+        left: 45%;
+    }
+
+    footer .nav-links {
+        position: relative;
+        left: 55%;
+        list-style: none;
+        display: flex; /* Keep this for horizontal buttons */
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+        align-items: center;
+    }
+
+    footer li {
+        margin-left: 50px; /* Space between buttons */
+    }
+
+    footer button {
+        /* Basic button styling to make them visible and clickable */
+        padding: 8px 15px;
+        background-color: #39483A; /* A slightly different shade for buttons */
+        color: white;
+        border: 1px solid #5a735b;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+footer img {
+    width: 220px;
+    height: 60px;
+}
+/*========================================================================================================*/
 
 /*========================================================================================================*/
 /* Hamburger Menu */

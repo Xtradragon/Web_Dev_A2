@@ -35,6 +35,10 @@ var About_Btn = document.querySelector("#About_Btn");
 var Home_Btn = document.querySelector("#Home_Btn");
 var History_Btn = document.querySelector("#History_Btn");
 
+var Footer_About_Btn = document.querySelector("#Footer_About_Btn");
+var Footer_Home_Btn = document.querySelector("#Footer_Home_Btn");
+var Footer_History_Btn = document.querySelector("#Footer_History_Btn");
+
 // Ham Burger Menu
 var Hamburger_Menu_Btn = document.querySelector("#Hamburger_Menu");
 var Drop_Down_Menu = document.querySelector("nav ul");
@@ -84,6 +88,30 @@ History_Btn.addEventListener("click", function ()
     Show_Pages(History_Page);
     Turn_Off_Active_Btn();
     this.classList.add("Active_Btn");
+});
+
+Footer_About_Btn.addEventListener("click", function () {
+    Hide_Pages();
+    console.log("About Button is Clicked");
+    Show_Pages(About_Page);
+    Turn_Off_Active_Btn();
+    About_Btn.classList.add("Active_Btn");
+});
+
+Footer_Home_Btn.addEventListener("click", function () {
+    Hide_Pages();
+    console.log("Home Button is Clicked")
+    Show_Pages(Home_Page);
+    Turn_Off_Active_Btn();
+    Home_Btn.classList.add("Active_Btn");
+});
+
+Footer_History_Btn.addEventListener("click", function () {
+    Hide_Pages();
+    console.log("History Button is Clicked")
+    Show_Pages(History_Page);
+    Turn_Off_Active_Btn();
+    History_Btn.classList.add("Active_Btn");
 });
 
 Hide_Pages();
