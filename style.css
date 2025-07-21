@@ -806,6 +806,16 @@ font-size: 1em;
     #Questions_Card {
         height: 55vw;
     }
+
+    .Quiz_Answer_Icon {
+        width: 5vw;
+        height: 5vw;
+        line-height: 5vw;
+    }
+
+    #Answers_Card label {
+        font-size: 2vw;
+    }
 }
 /*========================================================================================================*/
 
