@@ -18,8 +18,7 @@ body {
     background-size: cover;
     background-position-y: -1000px;
     font-family: Arial;
-    color: white;
-    overflow-x: hidden;     
+    color: white;     
     
 }
 
@@ -74,20 +73,20 @@ nav button.Active_Btn {
     margin: 0;
     position: relative;
     width: 40%;
-    min-height: 90.5vh;
+    height: 100%;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
     padding-top: 2%;
 }
 
-    #Left_Card_Content h1 {
-        margin: 0;
-        position: relative;
-        margin-top: 5%;
-        left: 20%;
-        font-size: 8.3vw;
-    }
+#Left_Card_Content h1 {
+    margin: 0;
+    position: relative;
+    margin-top: 5%;
+    left: 20%;
+    font-size: 8.3vw;
+}
 
 #Left_Card_Content p {
     margin: 0;
@@ -148,7 +147,7 @@ nav button.Active_Btn {
     top: 80.5%;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 50vh;
     background-image: url('images/MRT_Bridge.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,7 +156,7 @@ nav button.Active_Btn {
 }
 
 .Moving_Train_On_Track {
-    position: absolute; 
+    position: absolute;
     bottom: 17.5%;
     left: 150%;
     width: 80%;
@@ -377,7 +376,7 @@ input[type="radio"] {
 /*========================================================================================================*/
 /* Logo */
 .logo {
-    width: 15%;
+    width: 20vw;
     height: auto;
     padding: 25px 30px;
     margin: 20px 20px;
@@ -447,27 +446,26 @@ input[type="radio"] {
     height: 250px;
 }
 .Card_Container {
-    margin: 0;
     display: flex;
-    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 .Train_Info_Card {
-    width: 100%;
-    height: 100%;
-    margin: 0% 5%;
-    font-size: 0.55em;
+    margin: 0 5%;
+    font-size: 0.85em;
 }
 
-.Train_Info_Card img{
-    width: 100px;
-    height: 100px;
+.Train_Info_Card img {
+    width: 120px;
+    height: 120px;
 }
 
 #Bush_Background {
     position:relative;
-    bottom: 5%;
+    bottom: 20%;
     width: 100%;
     height: 160px;
 }
@@ -749,6 +747,28 @@ font-size: 1em;
         text-align: center;
 
     }
+
+    /* Fix About Page Train Info Icons */
+    .Train_Info_Card img {
+        width: 60px;
+        height: auto;
+    }
+
+    .Train_Info_Card {
+        margin: 0 5%;
+        font-size: 0.5em;
+    }
+
+    .logo {
+        width: 25vw;
+    }
+
+    .Track_Background_image {
+        top: 78.5%;
+        height: 70vh;
+    }
+
+
 }
 /*========================================================================================================*/
 
