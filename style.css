@@ -41,8 +41,6 @@ nav ul {
     overflow: hidden; /* So the Nav Bar on the sides allow to be curve as well */
 }
 
-
-
 nav button {
     background: none;
     border: none;
@@ -63,6 +61,7 @@ nav button.Active_Btn {
 /*========================================================================================================*/
 /* Main Content CSS */
 #Home_Page_Content {
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -195,28 +194,33 @@ nav button.Active_Btn {
 }
 
 #History_Card img {
-    width: 35%;
+    width: 25vw;
     position: absolute;
     top: 20%;
     left: 40%;
 }
 
+#History_Card h1 {
+    font-size: 1.8vw;
+}
+
 #History_Card p {
     text-align: left; /* Ensures left alignment */
     width: 50%;
+    font-size: 1.2vw;
 }
 
 
 #History_TimeLine {
+
     position: absolute;
-    top: 6%; /* Adjust vertical start */
+    top: 3%; /* Adjust vertical start */
     right: 5%; /* 5% from right */
     display: flex;
     flex-direction: column;
 }
 
-#History_TimeLine button 
-{
+#History_TimeLine button {
     display: flex;
     align-items: center; /* Dont Remove it will make the icon unallign with the text */
     justify-content: center; /* Make it Center Horizontal so Future and the year dont shift */
@@ -224,15 +228,15 @@ nav button.Active_Btn {
     background: none;
     border: none;
     color: white;
-    font-size: 2.25em;
+    font-size: 2vw;
     cursor: pointer;
     font-weight: bold;
-    margin: 60px 0px;
+    margin: 4vw 0px;
 }
 
 .Timeline_Icon {
-    width: 25px;
-    height: 25px;
+    width: 2vw;
+    height: 2vw;
     align-items: center;
     justify-content: center;
     object-fit: contain;
@@ -242,7 +246,7 @@ nav button.Active_Btn {
 
 .vl {
     border-left: 6px dashed white;
-    height:70px;
+    height: 4vw;
     position: absolute;
     left: 75%;
     margin: 5%;
@@ -261,9 +265,9 @@ nav button.Active_Btn {
 /*========================================================================================================*/
 #Quiz_Section
 {
-    margin-top: 10%;
+    margin: 10% 0%;
     width: 100%;
-    height: 800px;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -298,7 +302,7 @@ input[type="radio"] {
 
 #Answers_Card {
     background: rgba(57, 72, 58, 0.5);
-    height: 75%;
+    height: 30vw;
     width: 50%;
     margin-left: 5%;
     margin-right: 10%;
@@ -351,7 +355,7 @@ input[type="radio"] {
 #Questions_Card {
     background: rgba(0, 0, 0, 0.5);
     width: 30%;
-    height: 75%;
+    height: 30vw;
     margin-right: 2%;
     margin-left: 10%;
     border-radius: 10px;
@@ -609,7 +613,6 @@ input[type="radio"] {
     background: purple;
 }
 
-    
 
 .Front_Card, .Back_Card {
     position: absolute;
@@ -765,10 +768,44 @@ font-size: 1em;
 
     .Track_Background_image {
         top: 78.5%;
+        height: 35vh;
+    }
+
+    #About_Page_Track_Background
+    {
         height: 70vh;
     }
 
 
+    #History_TimeLine button {
+        width: 100px;
+        font-size: 3vw;
+    }
+
+    .Timeline_Icon {
+        width: 3vw;
+        height: 3vw;
+        margin: 0px 20px;
+    }
+
+
+    #Questions_Card h1 {
+        font-size: 3.5vw;
+    }
+
+
+    #Questions_Card p {
+        font-size: 2vw;
+    }
+
+    #Answers_Card
+    {
+        height: 55vw;
+    }
+
+    #Questions_Card {
+        height: 55vw;
+    }
 }
 /*========================================================================================================*/
 
