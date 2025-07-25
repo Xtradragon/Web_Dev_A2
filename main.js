@@ -1262,15 +1262,15 @@ Easy_Card_Image.src = 'images/Easy_Card.png';
 Normal_Card_Image.src = 'images/Normal_Card.png';
 Rush_Hour_Card_Image.src = 'images/Rush_Hour_Card.png';
 Train_Station_Image.src = 'images/Train_Station.png';
-Phone_Background_Image.src = 'Images/Phone_Background.png';
-Location_Btn_Image.src = 'Images/Location_Btn_Image.png';
-Square_Btn_Image.src = 'Images/Square_Btn_Image.png';
-Start_Travel_Btn_Image.src = 'Images/Start_Travel_Btn_Image.png';
-Forward_Arrow_Image.src = 'Images/Forward_Arrow_Image.png';
-Backward_Arrow_Image.src = 'Images/Backward_Arrow_Image.png';
-Map_Image.src = 'Images/Game_Map.png';
-Grey_Image.src = 'Images/Grey_Background.png';
-Win_Page_Image.src = 'Images/Win_Page_Background.png'
+Phone_Background_Image.src = 'images/Phone_Background.png';
+Location_Btn_Image.src = 'images/Location_Btn_Image.png';
+Square_Btn_Image.src = 'images/Square_Btn_Image.png';
+Start_Travel_Btn_Image.src = 'images/Start_Travel_Btn_Image.png';
+Forward_Arrow_Image.src = 'images/Forward_Arrow_Image.png';
+Backward_Arrow_Image.src = 'images/Backward_Arrow_Image.png';
+Map_Image.src = 'images/Game_Map.png';
+Grey_Image.src = 'images/Grey_Background.png';
+Win_Page_Image.src = 'images/Win_Page_Background.png'
 //-----------------------------------------------------------------------
 
 //-----------------------------------------------------------------------
