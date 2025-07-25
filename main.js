@@ -1275,25 +1275,25 @@ Win_Page_Image.src = 'images/Win_Page_Background.png'
 
 //-----------------------------------------------------------------------
 var Default_Train = new Image();
-Default_Train.src = 'Images/Default_Train.png';
+Default_Train.src = 'images/Default_Train.png';
 
 var NS_Line = new Image();
-NS_Line.src = 'Images/NS_Line.png';
+NS_Line.src = 'images/NS_Line.png';
 
 var EW_Line = new Image();
-EW_Line.src = 'Images/EW_Line.png';
+EW_Line.src = 'images/EW_Line.png';
 
 var NE_Line = new Image();
-NE_Line.src = 'Images/NE_Line.png';
+NE_Line.src = 'images/NE_Line.png';
 
 var CC_Line = new Image();
-CC_Line.src = 'Images/CC_Line.png';
+CC_Line.src = 'images/CC_Line.png';
 
 var DT_Line = new Image();
-DT_Line.src = 'Images/DT_Line.png';
+DT_Line.src = 'images/DT_Line.png';
 
 var TE_Line = new Image();
-TE_Line.src = 'Images/TE_Line.png';
+TE_Line.src = 'images/TE_Line.png';
 
 var Line_Images =
 {
