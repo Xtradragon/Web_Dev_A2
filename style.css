@@ -827,6 +827,12 @@ hr
     nav ul {
         display: none;
     }
+	
+	nav button
+	{
+		font-size: 2.25vw;
+	}
+	
 
     .Menu_Show {
         display: block;
@@ -843,12 +849,131 @@ hr
 		background-size: auto 80px, 1300px;   
 	}
 	
+	#Intro_Card_Left
+	{
+		padding: 10px 0px 40px 20px;
+	}
+	
 	#Intro_Card_Left h1, #Intro_Card_Right h1
 	{
 		font-size: 7.85vw;
 	}
+	
+	#Intro_Card_Left p
+	{
+		font-size: 2.05vw;
+	}
+	
+	#Intro_Card_Left button
+	{
+		font-size: 2.05vw;
+	}
 	/*==========================================================================================================*/
 	
+	
+	/*==========================================================================================================*/
+	/* About Page */
+	#Train_Length_Display h1
+	{
+		font-size: 10px;
+		width: 10%;
+	}
+	
+	.Train_Info_Card 
+	{
+		width: 150px;
+	}
+	
+	.Train_Info_Card img
+	{
+		width: 80px;
+	}
+	/*==========================================================================================================*/
+	
+	
+	/*==========================================================================================================*/
+	/* History Page */
+
+	#History_Info_Left h1
+	{
+		margin: 20px 20px 0px;
+		font-size: 25px;
+	}
+	
+	#History_Info_Left p
+	{
+		margin: 20px 20px 25px 20px;
+		font-size: 2.25vw;
+		width: 80%;
+	}
+	
+	#History_Info_Left a
+	{
+		font-size: 2.25vw;
+		padding: 2.55vw 4.5vw;
+		margin: 10px 0px 0px 20px;
+	}
+	
+	
+	.Timeline_btn {
+		padding: 0px;
+		font-size: 2.25vw;
+		margin: 40px 0px;
+	}
+	
+	.vl
+	{
+		height: 40px;
+		border-left: 2px dashed white;
+	}
+	
+	.Timeline_Icon
+	{
+		width: 20px;
+		height: 10px;
+		margin: 0px 10px;
+	}
+	
+	
+	#Questions_Card h1 
+	{
+		font-size: 10px;
+	}
+	
+	#Questions_Card p 
+	{
+		font-size: 2.25vw;
+	}
+	
+	#Answers_Card label
+	{
+		font-size: 7px;
+	}
+	
+	.Quiz_Answer_Icon
+	{
+		width: 20px;
+		height: 20px;
+		line-height: 21px;
+		margin-right: 5px;
+	}
+	
+	#Results_Details h1
+	{
+		font-size: 10px;
+	}
+	
+	#Results_Details p
+	{
+		font-size: 2.25vw;
+	}
+	
+	.Restart_Button
+	{
+		font-size: 2.25vw;
+		padding: 2.55vw 4.5vw;
+	}
+	/*==========================================================================================================*/
 	
 	/*==========================================================================================================*/
 	.footer-links  button 
