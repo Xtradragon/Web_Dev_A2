@@ -528,7 +528,7 @@ var stationTransitions =
             "Backward":
             {
                 "station": 1,
-                "line": 0,
+                "line": 1,
                 "Feedback": "Still at Woodlands time wasted"
             }
         }
@@ -1442,12 +1442,12 @@ var Station_Coordinates =
 var trainX = (canvas.width / 2) - 500;
 var lineX = (canvas.width / 2) - 478;
 var targetX = trainX - 1800; // Move 100px to the left
-var speed = 15; // Pixels per frame
+var speed = 5; // Pixels per frame
 
 var Travelling_Page_trainX = (canvas.width / 2) + 800;
 var Travelling_Page_lineX = (canvas.width / 2) + 815;
 var Travelling_Page_targetX = trainX - 1200; // Move 100px to the left
-var Travelling_Page_speed = 15; // Pixels per frame
+var Travelling_Page_speed = 3; // Pixels per frame
 
 
 var Current_Location_X = canvas.width / 2;
@@ -1579,16 +1579,15 @@ function Load_Map_Overlay() {
     var Map_Coordinates = Station_Coordinates[Current_Location];
     Current_Location_X = Map_Coordinates.x;
     Current_Location_Y = Map_Coordinates.y;
-    drawOverlay();                         // initial draw
+    drawOverlay();
     Blink_Loop = setInterval(() => {
-        blinkOn = !blinkOn;                  // flip color
-        drawOverlay();                       // re-draw map & dot
-    }, 800);  // every 500ms
+        blinkOn = !blinkOn;
+        drawOverlay();
+    }, 800);
 }
 
 
 function drawOverlay() {
-    // redraw the map
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(Map_Image, 25, 50, canvas.width - 50, canvas.height - 100);
     if (blinkOn) {
