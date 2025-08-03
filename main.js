@@ -8,6 +8,19 @@ var About_Page = document.querySelector("#About_Page");
 var History_Page = document.querySelector("#History_Page");
 //========================================================================================================================================//
 
+
+//========================================================================================================================================//
+
+var Wind_Sound_Effect = new Audio();
+var Inside_Train_Sound_Effect = new Audio();
+var Background_Noise_Sound_Effect = new Audio();
+
+//-----------------------------------------------------------------------
+Wind_Sound_Effect.src = 'images/Wind_Sound_SFX.mp3';
+Inside_Train_Sound_Effect.src ='images/Train_Inside.mp3';
+Background_Noise_Sound_Effect.src ='images/Noise_SFX.mp3';
+//-----------------------------------------------------------------------
+
 //========================================================================================================================================//
 // Buttons for Navigation
 var Nav_Links = document.querySelectorAll(".Nav_Links");
@@ -35,6 +48,9 @@ function Hide_Pages() {
     for (var Counter = 0; Counter < All_Pages.length; Counter++) {
         All_Pages[Counter].style.display = "none";
     }
+	Background_Noise_Sound_Effect.pause();
+	Wind_Sound_Effect.pause();
+	Inside_Train_Sound_Effect.pause();
 }
 
 function Turn_Off_Active_Btn() 
@@ -62,35 +78,35 @@ Nav_Links.forEach(Nav_Links => {
   Nav_Links.addEventListener("click", Check_Which_Button_Clicked);
 });
 
-		function Check_Which_Button_Clicked(Button_Clicked)
-		{
-			var Btn_Clicked =Button_Clicked.target;
-			console.log(Btn_Clicked.innerText);
-			if(Btn_Clicked.innerText == "History's" )
-			{
-				Hide_Pages();
-				console.log("History Button is Clicked");
-				Show_Pages(History_Page);
-				Turn_Off_Active_Btn();
-				History_Btn.id = "Active_Btn";
-			}
-			if(Btn_Clicked.innerText == "Home" )
-			{
-				Hide_Pages();
-				console.log("Home Button is Clicked");
-				Show_Pages(Home_Page);
-				Turn_Off_Active_Btn();
-				Home_Btn.id = "Active_Btn";
-			}
-			if(Btn_Clicked.innerText == "About" )
-			{
-				Hide_Pages();
-				console.log("About Button is Clicked");
-				Show_Pages(About_Page);
-				Turn_Off_Active_Btn();
-				About_Btn.id = "Active_Btn";
-			}
-		}
+function Check_Which_Button_Clicked(Button_Clicked)
+{
+	var Btn_Clicked =Button_Clicked.target;
+	console.log(Btn_Clicked.innerText);
+	if(Btn_Clicked.innerText == "History's" )
+	{
+		Hide_Pages();
+		console.log("History Button is Clicked");
+		Show_Pages(History_Page);
+		Turn_Off_Active_Btn();
+		History_Btn.id = "Active_Btn";
+	}
+	if(Btn_Clicked.innerText == "Home" )
+	{
+		Hide_Pages();
+		console.log("Home Button is Clicked");
+		Show_Pages(Home_Page);
+		Turn_Off_Active_Btn();
+		Home_Btn.id = "Active_Btn";
+	}
+	if(Btn_Clicked.innerText == "About" )
+	{
+		Hide_Pages();
+		console.log("About Button is Clicked");
+		Show_Pages(About_Page);
+		Turn_Off_Active_Btn();
+		About_Btn.id = "Active_Btn";
+	}
+}
 
 
 
@@ -454,66 +470,6 @@ function Restart_Quiz()
 
 //========================================================================================================================================//
 // Canva Mini Game Code
-
-
-
-
-//function Get_Canvas_Size() {
-//	
-//	const minWidth = 800;
-//	const maxWidth = 1280;
-//	const minHeight = 450;
-//	const maxHeight = 720;
-//
-//	const minScale = 1.0;
-//	const maxScale = 1.6;
-//
-//	
-//    const canvas = document.getElementById('Mini_Game_Canvas');
-//    const Canvas_Size = canvas.getBoundingClientRect();
-//
-//    console.log("Canvas Size: ", Canvas_Size.width, "x", Canvas_Size.height);
-//
-//    // Clamp both width and height
-//    const clampedWidth = Math.min(Math.max(Canvas_Size.width, minWidth), maxWidth);
-//    const clampedHeight = Math.min(Math.max(Canvas_Size.height, minHeight), maxHeight);
-//
-//    // Width scale factor
-//    const tWidth = (maxWidth - clampedWidth) / (maxWidth - minWidth);
-//    const scaleFromWidth = minScale + tWidth * (maxScale - minScale);
-//
-//    // Height scale factor
-//    const tHeight = (maxHeight - clampedHeight) / (maxHeight - minHeight);
-//    const scaleFromHeight = minScale + tHeight * (maxScale - minScale);
-//
-//    // Pick the smaller scale to avoid overflow/stretch
-//    Scale_Multiplier = Math.min(scaleFromWidth, scaleFromHeight);
-//
-//    console.log("Final Scale Multiplier: " + Scale_Multiplier.toFixed(2));
-//
-//    canvas.width = clampedWidth * Scale_Multiplier;
-//    canvas.height = clampedHeight * Scale_Multiplier;
-//}
-//
-//window.addEventListener('resize', () => {
-//    var canvas = document.getElementById('Mini_Game_Canvas')
-//    Get_Canvas_Size();
-//	
-//    switch (Current_Scene) {
-//        case "Game_Start_Page":
-//            Load_Game_Start_Page();
-//            break;
-//        case "Game_Diffcutly_Page":
-//            Load_Game_Diffcutly_Page();
-//            break;
-//	  	case "Game_Station_Page":
-//            Load_Game_Station_Page();
-//            break;
-//	}
-//});
-
-
-
 var interchangeStations =
     [
         { name: "Jurong East", lines: ["NS", "EW"] }, 				// 0
@@ -1325,9 +1281,6 @@ var Map_Image = new Image();
 var Train_Bridge_Image = new Image();
 var Grey_Image = new Image();
 var Win_Page_Image = new Image();
-var Wind_Sound_Effect = new Audio();
-var Inside_Train_Sound_Effect = new Audio();
-var Background_Noise_Sound_Effect = new Audio();
 
 //-----------------------------------------------------------------------
 canvas.width = 1280;
@@ -1353,11 +1306,7 @@ Grey_Image.src = 'images/Grey_Background.png';
 Win_Page_Image.src = 'images/Win_Page_Background.png';
 //-----------------------------------------------------------------------
 
-//-----------------------------------------------------------------------
-Wind_Sound_Effect.src = 'images/Wind_Sound_SFX.mp3';
-Inside_Train_Sound_Effect.src ='images/Train_Inside.mp3';
-Background_Noise_Sound_Effect.src ='images/Noise_SFX.mp3';
-//-----------------------------------------------------------------------
+
 
 //-----------------------------------------------------------------------
 var Default_Train = new Image();
