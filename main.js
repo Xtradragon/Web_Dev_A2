@@ -165,41 +165,105 @@ const Cloud_One = document.querySelector('#cloud1');
 const Cloud_Two = document.querySelector('#cloud2');
 const Cloud_Three = document.querySelector('#cloud3');
 
-let Cloud_One_Left_Position = 50;
-let Cloud_Two_Left_Position = 120;
-let Cloud_Three_Left_Position = 200;
+let Cloud_One_Left_Position = 40;
+let Cloud_Two_Left_Position = 90;
+let Cloud_Three_Left_Position = 20;
+
+let Cloud_One_Opacity = 0;
+let Cloud_Two_Opacity = 0;
+let Cloud_Three_Opacity = 0;
+
+let Cloud_One_Lower_Opacity = true;
+let Cloud_Two_Lower_Opacity = true;
+let Cloud_Three_Lower_Opacity = true;
 
 var Make_Clouds_Move = setInterval(Animate_Clouds, 100);
 
 function Animate_Clouds ()
 {
 	let Left_Velocity = 1.2;
+	let Opacity_Increasement = 0.01;
+	
+	Cloud_One_Left_Position -= Left_Velocity;
+    Cloud_Two_Left_Position -= Left_Velocity;
+    Cloud_Three_Left_Position -= Left_Velocity;
+	
+	//------------------------------------------------------------------
+    if (Cloud_One_Lower_Opacity) 
+	{
+        Cloud_One_Opacity -= Opacity_Increasement;
+        if (Cloud_One_Opacity <= 0) Cloud_One_Lower_Opacity = false;
+    } 
+	else 
+	{
+        Cloud_One_Opacity += Opacity_Increasement;
+        if (Cloud_One_Opacity >= 0.5) Cloud_One_Lower_Opacity = true;
+    }
+	//------------------------------------------------------------------
+	
+	//------------------------------------------------------------------
+	if (Cloud_Two_Lower_Opacity) 
+	{
+        Cloud_Two_Opacity -= Opacity_Increasement;
+        if (Cloud_Two_Opacity <= 0) Cloud_Two_Lower_Opacity = false;
+    } 
+	else 
+	{
+        Cloud_Two_Opacity += Opacity_Increasement;
+        if (Cloud_Two_Opacity >= 0.5) Cloud_Two_Lower_Opacity = true;
+    }
+	//------------------------------------------------------------------
+	
+	//------------------------------------------------------------------
+	if (Cloud_Three_Lower_Opacity) 
+	{
+        Cloud_Three_Opacity -= Opacity_Increasement;
+        if (Cloud_Three_Opacity <= 0) Cloud_Three_Lower_Opacity = false;
+    } 
+	else 
+	{
+        Cloud_Three_Opacity += Opacity_Increasement;
+        if (Cloud_Three_Opacity >= 0.5) Cloud_Three_Lower_Opacity = true;
+    }
+	//------------------------------------------------------------------
+	
+	Cloud_One.style.opacity = Cloud_One_Opacity;
+	Cloud_Two.style.opacity = Cloud_Two_Opacity;
+	Cloud_Three.style.opacity = Cloud_Three_Opacity;
+	
 	Cloud_One.style.transition = 'left 0.5s';
 	Cloud_Two.style.transition = 'left 0.5s';
 	Cloud_Three.style.transition = 'left 0.5s';
 	
-	Cloud_One_Left_Position -= Left_Velocity;
-	Cloud_Two_Left_Position -= Left_Velocity;
-	Cloud_Three_Left_Position -= Left_Velocity;
-	
 	Cloud_One.style.left = Cloud_One_Left_Position + '%';
-	Cloud_Two.style.left = Cloud_Two_Left_Position + '%';
-	Cloud_Three.style.left = Cloud_Three_Left_Position + '%';
+    Cloud_Two.style.left = Cloud_Two_Left_Position + '%';
+    Cloud_Three.style.left = Cloud_Three_Left_Position + '%';
 	
-	if (Cloud_One_Left_Position < -120)
-    {
-        setTimeout(function () { Cloud_One.style.transition = 'none'; Cloud_One_Left_Position = 150; }, 2000);
-    }
+	if (Cloud_One_Left_Position < -60) 
+	{
+		Cloud_One.style.transition = 'none'; 
+		setTimeout(function () { 
+			Cloud_One_Left_Position = 90;
+			Cloud_One_Opacity = 0;
+		}, 500);
+	}
+    if (Cloud_Two_Left_Position < -60)
+	{
+		Cloud_Two.style.transition = 'none'; 
+		setTimeout(function () { 
+			Cloud_Two_Left_Position = 50;
+			Cloud_Two_Opacity = 0;
+		}, 2000);
+	}
+    if (Cloud_Three_Left_Position < -60)
+	{	
+		Cloud_Three.style.transition = 'none'; 
+		setTimeout(function () { 
+			Cloud_Three_Left_Position = 70;
+			Cloud_Three_Opacity = 0;
+		}, 500);
+	}
 	
-	if (Cloud_Two_Left_Position < -120)
-    {
-        setTimeout(function () { Cloud_One.style.transition = 'none'; Cloud_Two_Left_Position = 150; }, 1000);
-    }
-	
-	if (Cloud_Three_Left_Position < -120)
-    {
-        setTimeout(function () { Cloud_One.style.transition = 'none'; Cloud_Three_Left_Position = 150; }, 3000);
-    }
 }
 //----------------------------------------------------------------------------------------------------------------------------------------//
 
