@@ -147,12 +147,11 @@ nav button
 	}
 
 
-	#cloud1, #cloud2, #cloud3
+	#cloud1, #cloud2, #cloud3 
 	{
 		position: absolute;
-		width: 150px;
 		pointer-events: none;
-		width: 200px;
+		width: 30vw;
 	}
 
 	#cloud1 
