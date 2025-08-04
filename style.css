@@ -1,13 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 
+body,html
+{
+	overflow-x: hidden;
+}
+
 body
 {
 	font-family: Arial;
 	margin: 0;
     background-image: url("images/Background.jpg");
     background-size: cover;
-	overflow-x: hidden;
 }
 
 /*========================================================================================================*/
@@ -393,7 +397,7 @@ nav button
 	}
 
 
-	.Flip_Card:hover, .Flip_Card:focus /* When Hovering over the card it flips it /  But for Mobile Hovering does not work so need to make tap or clicked to work */ 
+	.Flip_Card:hover, .Flip_Card.flipped  /* When Hovering over the card it flips it /  But for Mobile Hovering does not work so need to make tap or clicked to work */ 
 	{
 		width: 220px;
 		height: 350px;

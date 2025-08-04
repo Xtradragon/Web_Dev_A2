@@ -211,6 +211,32 @@ Show_Pages(Home_Page);
 //========================================================================================================================================//
 
 
+
+
+
+
+//========================================================================================================================================//
+/* Mobile Card Flipping Function */
+document.querySelectorAll('.Flip_Card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        // Remove "flipped" from all other cards
+        document.querySelectorAll('.Flip_Card').forEach(function(c) {
+            if (c !== card) {
+                c.classList.remove('flipped');
+            }
+        });
+
+        // Toggle the clicked card
+        card.classList.toggle('flipped');
+    });
+});
+
+//========================================================================================================================================//
+
+
+
+
+
 //========================================================================================================================================//
 /* History clicking through each year */
 
