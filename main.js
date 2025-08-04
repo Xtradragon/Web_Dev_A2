@@ -211,26 +211,20 @@ Show_Pages(Home_Page);
 //========================================================================================================================================//
 
 
-
-
-
-
 //========================================================================================================================================//
 /* Mobile Card Flipping Function */
-document.querySelectorAll('.Flip_Card').forEach(function(card) {
-    card.addEventListener('click', function() {
-        // Remove "flipped" from all other cards
-        document.querySelectorAll('.Flip_Card').forEach(function(c) {
-            if (c !== card) {
-                c.classList.remove('flipped');
+document.querySelectorAll('.Flip_Card').forEach(function(Train_Card) {
+    Train_Card.addEventListener('click', function() {
+
+        document.querySelectorAll('.Flip_Card').forEach(function(Train_Card_Index) {
+            if (Train_Card_Index != Train_Card) {
+                Train_Card_Index.classList.remove('flipped');
             }
         });
-
-        // Toggle the clicked card
-        card.classList.toggle('flipped');
+		
+        Train_Card.classList.toggle('flipped');
     });
 });
-
 //========================================================================================================================================//
 
 
