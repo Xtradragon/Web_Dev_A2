@@ -951,6 +951,8 @@ hr
 	#Intro_Card_Left button
 	{
 		font-size: 3vw;
+		padding: 2.5vw 2.7vw;
+		margin-bottom: 10%;
 	}
 
 	#Intro_Card_Right
