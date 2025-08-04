@@ -161,12 +161,12 @@ function Toggle_Menus()
 
 //----------------------------------------------------------------------------------------------------------------------------------------//
 //Clouds Moving Functions
-const Cloud_One = document.querySelector('#cloud1');
-const Cloud_Two = document.querySelector('#cloud2');
-const Cloud_Three = document.querySelector('#cloud3');
+let Cloud_One = document.querySelector('#cloud1');
+let Cloud_Two = document.querySelector('#cloud2');
+let Cloud_Three = document.querySelector('#cloud3');
 
 let Cloud_One_Left_Position = 40;
-let Cloud_Two_Left_Position = 90;
+let Cloud_Two_Left_Position = 60;
 let Cloud_Three_Left_Position = 20;
 
 let Cloud_One_Opacity = 0;
@@ -243,7 +243,7 @@ function Animate_Clouds ()
 	{
 		Cloud_One.style.transition = 'none'; 
 		setTimeout(function () { 
-			Cloud_One_Left_Position = 90;
+			Cloud_One_Left_Position = 60;
 			Cloud_One_Opacity = 0;
 		}, 500);
 	}
